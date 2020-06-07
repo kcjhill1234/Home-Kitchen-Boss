@@ -86,10 +86,10 @@
                 </select>
                 <label>Food allergys</label>
               </div>
-            <div class="search-container " style="float: right;">
+            <div class="input-field " style="float: right;">
               <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="searchSubmit">Search</i></button>
+                <input type="text" placeholder="Search.." name="search" class="search">
+                <button type="submit"><i class="searchSubmit search">Search</i></button>
               </form>
             </div>
           
@@ -136,8 +136,18 @@ grid-row-gap: 10px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
  background-color: gray;
-
 }
+
+.input-field label {
+     color: rgb(90, 11, 11);
+    font-size: 2.5vw;
+    }
+
+.input-field input[type=text] {
+    font-size:2.5vw;
+    color: crimson;
+}
+ 
 @font-face {
   font-family: lily;
   src: url("./Lily.ttf");
