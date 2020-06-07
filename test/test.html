@@ -12,9 +12,15 @@
         <title>Document</title>
 </head>
 <body>
+  <h1>Home Kitchen Boss</h1>
     <form>
-        <div class="row" >
-            <div class="input-field col s3">
+        <div class="row header " >
+           <div class="col s4">
+            <img src="boss.png" class="icon">
+          </div>
+            
+          <div class="col s7 grid">  
+            <div class="input-field">
                 <select>
                   <option value="">None Specific</option>
                     <option value="Gluten Free" >Gluten Free</option>
@@ -30,7 +36,7 @@
                 </select>
                 <label>Diet Choice</label>
               </div>
-              <div class="input-field col s3">
+              <div class="input-field ">
                 <select>
                   <option value="">None Specific</option>
                   <option value="African">African</option>  
@@ -61,7 +67,8 @@
                 </select>
                 <label>Cuisine Choice</label>
               </div>
-              <div class="input-field col s3">
+            
+                        <div class="input-field ">
                 <select>
                   <option value="">None Specific</option>
                     <option value="Dairy" >Dairy</option>
@@ -79,17 +86,63 @@
                 </select>
                 <label>Food allergys</label>
               </div>
-            <div class="search-container s3" style="float: right;">
+            <div class="search-container " style="float: right;">
               <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit"><i class="searchSubmit">Search</i></button>
               </form>
             </div>
-          </div>
+          
+         </div> 
+        </div>
+      </div>
           </form>
           
 </body>
+<style>
+  h1{
+    font-size: 8vw;
+    position: absolute;
+    content: center;
+    top: -5%;
+    right: 10%;
+    font-family: lily;
+    color: rgb(173, 24, 24);
 
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+
+
+  }
+  .icon{
+  
+    height: 35vw;;
+
+  }
+  
+  .grid {
+    height: 25vw;
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+
+ margin-top: 10vw ;
+
+}
+
+.header{
+  background-image: url("kitchen.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ background-color: gray;
+
+}
+@font-face {
+  font-family: lily;
+  src: url("./Lily.ttf");
+}
+</style>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
