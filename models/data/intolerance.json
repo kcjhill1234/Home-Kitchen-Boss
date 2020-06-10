@@ -1,0 +1,14 @@
+[
+  { "name": "Dairy", "value": "dairy" },
+  { "name": "Egg", "value": "egg" },
+  { "name": "Gluten", "value": "gluten" },
+  { "name": "Grain", "value": "grain" },
+  { "name": "Peanut", "value": "peanut" },
+  { "name": "Seafood", "value": "seafood" },
+  { "name": "Sesame", "value": "sesame" },
+  { "name": "Shellfish", "value": "shellfish" },
+  { "name": "Soy", "value": "soy" },
+  { "name": "Sulfite", "value": "sulfite" },
+  { "name": "Tree Nut", "value": "tree nut" },
+  { "name": "Wheat", "value": "wheat" }
+]
