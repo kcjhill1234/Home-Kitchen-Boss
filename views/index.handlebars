@@ -4,11 +4,11 @@
     <div class="col s4">
       <img src="/images/boss.png" class="icon">
     </div>
-    <form class="col s8">
+    <form class="col s8"action="/api" method="POST">
       <div class="row">
         <div class="input-field col s12">
           <label>Diet Choice</label>
-          <select id="dietChoices">
+          <select id="dietChoices" name="diet">
             <option value="">Not Specified</option>
           </select>
         </div>
@@ -16,7 +16,7 @@
       <div class="row">
         <div class="input-field col s12">
           <label>Cuisine Choice</label>
-          <select id="cuisineChoices">
+          <select id="cuisineChoices" name="cuisine">
             <option value="">Not Specified</option>
           </select>
         </div>
@@ -24,7 +24,7 @@
       <div class="row">
         <div class="input-field col s12">
           <label>Food Allergies</label>
-          <select multiple id="foodAllergies">
+          <select multiple id="foodAllergies" name="alergy">
             <option value="">None Specific</option>
           </select>
         </div>
@@ -32,7 +32,7 @@
       <div class="row">
         <div class="input-field col s12">
           <input type="text" placeholder="Search.." name="search">
-          <button class="waves-effect waves-light btn" type="button"><i class="material-icons">search</i> Search</button>
+          <button class="waves-effect waves-light btn" type="submit" ><i class="material-icons">search</i> Search</button>
         </div>
       </div>
     </form>
