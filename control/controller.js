@@ -6,8 +6,9 @@ var model = require('../models/model')
 router.post("/api", function(req, res) {
     // model.create(["spoon"],
     let {search,cuisine,diet,alergy} = req.body
-      model.FindRecipe(search,cuisine,diet,alergy,function (res){
-        console.log("returned fromapi", res)
+    console.log("control allergy=",alergy) 
+    model.FindRecipe(search,cuisine,diet,alergy,function (res){
+        console.log("returned fromapi", res.data)
       });
     });
   // });
