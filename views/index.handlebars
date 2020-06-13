@@ -5,11 +5,12 @@
            <div class="col s3">
             <img src="/images/boss.png" class="icon">
           </div>
-          <div class="col s7 grid">  
-            <form class="col s8"action="/api" method="POST">
+          <div class="col s7">  
+            <form class="grid"action="/api" method="POST">
             <div class="input-field">
                     <label>Diet Choice</label>
-                 <select id="dietChoices" name="diet">
+                    <div>
+                 <select  name="diet">
                   <option value="">None Specific</option>
                     <option value="Gluten Free" >Gluten Free</option>
                   <option value="Ketogenic">Ketogenic</option>
@@ -22,11 +23,12 @@
                   <option value="Primal">Primal</option>
                   <option value="Whole30">Whole30</option>
                 </select>
-            
+                  </div>
               </div>
               <div class="input-field ">
                 <label>Cuisine Choice</label>
-                 <select multiple id="foodAllergies" name="alergy">
+                 <div>
+                 <select   name="cuisine">
                   <option value="">None Specific</option>
                   <option value="African">African</option>  
                   <option value="American" >American</option>
@@ -54,12 +56,14 @@
                   <option value="Thai">Thai</option>
                   <option value="Vietnamese">Vietnamese</option>
                 </select>
-                
+                </div>
               </div>
             
                         <div class="input-field ">
                 <label >Food allergys</label>
-               <select multiple id="foodAllergies" name="alergy">
+               <div>
+               <select class="checkboxes" multiple  name="alergy">
+                  
                   <option value="">None Specific</option>
                     <option value="Dairy" >Dairy</option>
                   <option value="Egg">Egg</option>
@@ -74,11 +78,11 @@
                   <option value="Tree Nut">Tree Nut</option>
                   <option value="Wheat">Wheat</option>
                 </select>
-                
+               </div>
               </div>
              <div class="input-field ">
           <input type="text" placeholder="Search.." name="search">
-           <button class="waves-effect waves-light btn" type="submit" ><i class="material-icons">search</i> Search</button>
+           <button  type="submit"> Search</button>
         </div>
       </div>
     </form>
