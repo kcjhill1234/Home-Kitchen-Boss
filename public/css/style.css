@@ -10,16 +10,13 @@ img {
   height: 35vw;
 }
 
-/* .grid {
+.grid {
   height: 25vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 25%;
-  grid-row-gap: 20px;
-
-  margin-top: 10vw;
-} */
+grid-template-columns: 1fr;
+grid-template-rows: repeat(7, 1fr);
+grid-row-gap: 50px;
+}
 
 html {
   background-image: url("/images/kitchen.jpg");
@@ -53,4 +50,9 @@ button {
 }
 .select {
   background-color: white;
+}
+form{
+  position: absolute;
+  right: 5%;
+  top: 40%;
 }
