@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const getOptionsUrl = (url) => `http://localhost:8080/options/${url}`;
+  const getOptionsUrl = (url) => `/options/${url}`;
   const mapToOption = ({ name, value }) => {
     return `<option value="${value}">${name}</option>`;
   };
