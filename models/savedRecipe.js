@@ -12,6 +12,6 @@ const SavedRecipe = sequelize.define("saved-recipes", {
   user: Sequelize.STRING,
 });
 
-SavedRecipe.sync({ force: true });
+SavedRecipe.sync();
 
 module.exports = SavedRecipe;

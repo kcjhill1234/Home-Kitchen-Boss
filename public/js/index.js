@@ -11,16 +11,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `<option value="${value}">${name}</option>`;
   };
 
-  const mapRecipeToCard = (data) => {
+  const mapRecipeToCard = (data, showBtn) => {
     const { title, image, readyInMinutes, servings, sourceUrl } = data;
     const recipe = btoa(JSON.stringify(data));
+    const favoriteBtn = `<button data-recipe='${recipe}' class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite</i></button>`;
     return `
     <div class="col l3 m6 s12">
     <div class="card">
       <div class="card-image">
         <img src="${image}">
         <span class="card-title">${title}</span>
-        <button data-recipe='${recipe}' class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite</i></button>
+        ${showBtn ? favoriteBtn : ""}
       </div>
       <div class="card-content">
         <span>Ready in ${readyInMinutes} minutes</span>
@@ -75,6 +76,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     foodAllergiesSelect,
     selectConfig
   );
+  document.querySelector("#saveRecipe").addEventListener("click", async () => {
+    const savedRecipes = await (
+      await fetch(getApiUrl(`recipe/${username}`))
+    ).json();
+    const html = savedRecipes
+      .map((recipe) => {
+        return mapRecipeToCard(recipe, false);
+      })
+      .join("");
+    resultsContainer.innerHTML = html;
+  });
+
   document.querySelector("#searchBtn").addEventListener("click", async () => {
     const diet = dietChoiceSelect.value;
     const cuisine = cuisineChoicesSelect.value;
@@ -98,7 +111,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           spoon.image = spoonData.baseUri + spoon.image;
           return spoon;
         })
-        .map(mapRecipeToCard)
+        .map((recipe) => {
+          return mapRecipeToCard(recipe, true);
+        })
         .join("");
       resultsContainer.innerHTML = html;
       for (const element of document.querySelectorAll(".btn-floating")) {
@@ -121,5 +136,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // console.log(await (await fetch(getApiUrl(`recipe/${username}`))).json());
+  console.log(await (await fetch(getApiUrl(`recipe/${username}`))).json());
 });

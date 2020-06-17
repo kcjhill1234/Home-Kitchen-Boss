@@ -5,23 +5,19 @@
       <img id="htmlImage" src="/images/boss.png" class="icon">
     </div>
     <form class="col s9">
-      <div class="">
+      <div class="row">
         <div class="input-field col l4 m6 s8">
           <label>Diet Choice</label>
           <select id="dietChoices">
             <option value="">Not Specified</option>
           </select>
         </div>
-      </div>
-      <div class="">
         <div class="input-field col l4 m6 s8">
           <label>CuisineChoice</label>
           <select id="cuisineChoices">
             <option value="">Not Specified</option>
           </select>
         </div>
-      </div>
-      <div class="">
         <div class="input-field col l4 m6 s8">
           <label>Food Allergies</label>
           <select multiple id="foodAllergies">
@@ -32,29 +28,32 @@
       <div class="row">
         <div class="input-field col s8 l4 m6">
           <input id="searchTxt" type="text" placeholder="Search.." name="search">
-          <button id="searchBtn" class="waves-effect waves-light btn" type="button"><i class="material-icons">search</i> Search</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s8 l4 m6">
+          <button id="searchBtn" class="waves-effect waves-light btn" type="button"><i class="material-icons">search</i>
+            Search</button>
+        </div>
+        <div class="input-field col s8 l4 m6">
+          <button id="saveRecipe" class="waves-effect waves-light btn" type="button">Saved Recipes</button>
         </div>
       </div>
     </form>
   </div>
-
   <div class="row">
     <div class="col s12">
       <div id="results">
-        
       </div>
     </div>
   </div>
-
   <div id="userModal" class="modal">
     <div class="model-content">
       <h5>Please enter your Name</h5>
-      <input size= "5" id="username" type="text">
+      <input size="5" id="username" type="text">
     </div>
     <div class="model-footer">
       <button class="modal-close waves-effect btn">Okay</button>
     </div>
   </div>
-
-
 </body>
