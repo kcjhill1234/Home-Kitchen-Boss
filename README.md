@@ -1,5 +1,7 @@
 # Home-Kitchen-Boss
 
+## screenshot of deployed app pages
+![image](https://user-images.githubusercontent.com/60640915/91387289-2d84c800-e7f2-11ea-98d1-41323017d71b.png)
 ​
 ## Overview
 This app is used to find recipes for every occasion! Whether you want to know the nationality of it, the diet type of it, or even include allergies to exclude from the list.
